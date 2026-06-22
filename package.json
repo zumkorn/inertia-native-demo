@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "vite": "^8.0.16",
+    "vite-plugin-ruby": "^5.2.2"
+  },
+  "dependencies": {
+    "@inertiajs/react": "^3.4.0",
+    "@inertiajs/vite": "^3.4.0",
+    "@vitejs/plugin-react": "^6.0.2",
+    "inertia-hotwire-native": "0.1.0-beta.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}

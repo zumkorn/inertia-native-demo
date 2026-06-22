@@ -1,0 +1,92 @@
+:root {
+  /*
+   * Colors
+   */
+
+  --color-accent: rgba(193, 139, 244, 1);
+  --color-on-accent: rgba(255, 255, 255, 1);
+  --color-link: rgba(193, 139, 244, 1);
+
+  --color-body: rgba(255, 255, 255, 1);
+  --color-on-body: rgba(0, 0, 0, 1);
+  --color-on-body-muted: rgba(0, 20, 40, 0.6);
+
+  --color-surface: rgba(246, 247, 248, 1);
+  --color-on-surface: rgba(0, 0, 0, 1);
+
+  --color-subtle: rgba(172, 176, 180, 1);
+  --color-outline: rgba(222, 226, 230, 1);
+
+  --color-warning: rgba(196, 78, 57, 1);
+  --color-success: rgba(84, 163, 104, 1);
+
+  @media (prefers-color-scheme: dark) {
+    --color-link: rgba(193, 139, 244, 1);
+
+    --color-body: rgba(40, 42, 44, 1);
+    --color-on-body: rgba(255, 255, 255, 1);
+    --color-on-body-muted: rgba(215, 235, 255, 0.65);
+
+    --color-surface: rgba(45, 46, 47, 1);
+    --color-on-surface: rgba(255, 255, 255, 1);
+
+    --color-subtle: rgba(97, 101, 105, 1);
+    --color-outline: rgba(77, 81, 85, 1);
+
+    --color-warning: rgba(244, 133, 113, 1);
+    --color-success: rgba(92, 204, 120, 1);
+  }
+
+  /*
+   * Fonts
+   */
+
+  --font-family: -apple-system, BlinkMacSystemFont, Aptos, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  /*
+   * Text
+   */
+
+  --text-body-size: 1rem;
+  --text-headline-size: 1rem;
+  --text-title-size: 1.4rem;
+  --text-large-title-size: 2rem;
+
+  --text-line-height: 1.5;
+
+  /*
+   * Breakpoints
+   */
+
+  --breakpoint-medium: 35rem; /* 560 */
+  --breakpoint-large: 45rem; /* 720 */
+  --breakpoint-x-large: 60rem; /* 960 */
+  --breakpoint-xx-large: 80rem; /* 1280 */
+
+  /*
+   * Spaces
+   */
+
+  --space-medium: 0.5rem;
+  --space-large: calc(var(--space-medium) * 2);
+  --space-x-large: calc(var(--space-large) * 2);
+  --space-xx-large: calc(var(--space-large) * 4);
+
+  --space-gutter: 1.5rem;
+
+  /*
+   * Top Level Container
+   */
+
+  --top-level-container-padding: max(1rem, 4%);
+
+  @media (min-width: 80rem) {
+    --top-level-container-padding: max(4%, calc(50% - 40rem));
+  }
+
+  /*
+   * Forms
+   */
+
+  --form-disabled-control-opacity: 0.6;
+}

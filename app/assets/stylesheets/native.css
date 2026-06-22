@@ -1,0 +1,9 @@
+/* Styles applied only inside Hotwire Native apps.
+   The `hotwire-native` class is added to <body> server-side (see the layout +
+   NativeSupport#native_app?), so these rules are inert in a regular browser. */
+
+/* Hide web-only chrome (logo header, in-page <h1> titles) — the native app
+   shows the title in its native navigation bar instead. */
+.hotwire-native .hide\@native {
+  display: none !important;
+}

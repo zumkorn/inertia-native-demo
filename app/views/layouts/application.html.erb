@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Hotwire Native Demo" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "variables" %>
+    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "form" %>
+    <%= stylesheet_link_tag "containers" %>
+    <%= stylesheet_link_tag "header" %>
+    <%= stylesheet_link_tag "utilities" %>
+    <%= stylesheet_link_tag "native" %>
+
+    <%= vite_react_refresh_tag %>
+    <%= vite_client_tag %>
+    <%= inertia_ssr_head %>
+    <%= vite_javascript_tag "inertia.jsx" %>
+  </head>
+
+  <body class="<%= "hotwire-native" if native_app? %>">
+    <%= yield %>
+  </body>
+</html>
