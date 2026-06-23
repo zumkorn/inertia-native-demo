@@ -1,6 +1,6 @@
 # Inertia Native Demo
 
-A small Rails web app to demonstrate how to use [Inertia](https://inertiajs.com) (React) with the [Hotwire Native](https://native.hotwired.dev) frameworks.
+A small Rails web app to demonstrate how to use [Inertia](https://inertiajs.com) (React) with the [Hotwire Native](https://native.hotwired.dev) frameworks. The demo app is available at https://demo.inertia-native.dev.
 
 ## Running Locally
 
