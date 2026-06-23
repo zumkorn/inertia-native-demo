@@ -4,6 +4,8 @@ ruby file: ".ruby-version"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.1.3"
+# The modern asset pipeline for Rails [https://github.com/rails/propshaft]
+gem "propshaft"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", ">= 2.1"
 # Use the Puma web server [https://github.com/puma/puma]
@@ -48,6 +50,10 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
+  # Bun JavaScript runtime, bundled via Ruby — used by bin/dev locally.
+  # Excluded from the production image (Docker builds assets via npm/npx).
+  gem "bundlebun"
 end
 
 group :test do
@@ -58,4 +64,4 @@ end
 
 gem "inertia_rails", "~> 3.21"
 
-gem "vite_rails", "~> 3.11"
+gem "rails_vite", "~> 0.2"
