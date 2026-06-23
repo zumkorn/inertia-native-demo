@@ -40,4 +40,9 @@ node_modules
 # https://vitejs.dev/guide/env-and-mode.html#env-files
 *.local
 .idea
+/config/deploy.production.yml
+/.kamal/secrets.production
+
+# Ignore key files for decrypting credentials and more.
+/config/*.key
 

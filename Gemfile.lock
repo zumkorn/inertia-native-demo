@@ -87,6 +87,15 @@ GEM
     brakeman (7.1.2)
       racc
     builder (3.3.0)
+    bundlebun (0.5.0.1.3.14-aarch64-linux-gnu)
+      json (~> 2.0)
+      zeitwerk (~> 2.5)
+    bundlebun (0.5.0.1.3.14-arm64-darwin)
+      json (~> 2.0)
+      zeitwerk (~> 2.5)
+    bundlebun (0.5.0.1.3.14-x86_64-linux-gnu)
+      json (~> 2.0)
+      zeitwerk (~> 2.5)
     capybara (3.40.0)
       addressable
       matrix
@@ -105,7 +114,6 @@ GEM
       reline (>= 0.3.8)
     dotenv (3.1.8)
     drb (2.2.3)
-    dry-cli (1.4.1)
     ed25519 (1.4.0)
     erb (5.1.1)
     erubi (1.13.1)
@@ -154,9 +162,9 @@ GEM
     marcel (1.1.0)
     matrix (0.4.3)
     mini_mime (1.1.5)
-    minitest (5.26.0)
+    mini_portile2 (2.8.9)
+    minitest (5.27.0)
     msgpack (1.8.0)
-    mutex_m (0.3.0)
     net-imap (0.5.12)
       date
       net-protocol
@@ -172,6 +180,9 @@ GEM
       net-protocol
     net-ssh (7.3.0)
     nio4r (2.7.4)
+    nokogiri (1.18.10)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.18.10-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.18.10-arm64-darwin)
@@ -187,6 +198,10 @@ GEM
       prettyprint
     prettyprint (0.2.0)
     prism (1.4.0)
+    propshaft (1.3.2)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
     psych (5.2.6)
       date
       stringio
@@ -196,8 +211,6 @@ GEM
     raabro (1.4.0)
     racc (1.8.1)
     rack (3.2.3)
-    rack-proxy (0.8.2)
-      rack
     rack-session (2.1.1)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -226,6 +239,8 @@ GEM
     rails-html-sanitizer (1.6.2)
       loofah (~> 2.21)
       nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
+    rails_vite (0.2.3)
+      railties (>= 7.0)
     railties (8.1.3)
       actionpack (= 8.1.3)
       activesupport (= 8.1.3)
@@ -300,6 +315,8 @@ GEM
       fugit (~> 1.11.0)
       railties (>= 7.1)
       thor (>= 1.3.1)
+    sqlite3 (2.7.4)
+      mini_portile2 (~> 2.8.0)
     sqlite3 (2.7.4-aarch64-linux-gnu)
     sqlite3 (2.7.4-arm64-darwin)
     sqlite3 (2.7.4-x86_64-linux-gnu)
@@ -321,18 +338,9 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (3.2.0)
       unicode-emoji (~> 4.1)
-    unicode-emoji (4.1.0)
+    unicode-emoji (4.2.0)
     uri (1.0.4)
     useragent (0.16.11)
-    vite_rails (3.11.0)
-      railties (>= 5.1, < 9)
-      vite_ruby (~> 3.0, >= 3.2.2)
-    vite_ruby (3.10.2)
-      dry-cli (>= 0.7, < 2)
-      logger (~> 1.6)
-      mutex_m
-      rack-proxy (~> 0.6, >= 0.6.1)
-      zeitwerk (~> 2.2)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -358,13 +366,16 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   brakeman
+  bundlebun
   capybara
   debug
   inertia_rails (~> 3.21)
   jbuilder
   kamal
+  propshaft
   puma (>= 5.0)
   rails (~> 8.1.3)
+  rails_vite (~> 0.2)
   rubocop-rails-omakase
   selenium-webdriver
   solid_cable
@@ -373,11 +384,10 @@ DEPENDENCIES
   sqlite3 (>= 2.1)
   thruster
   tzinfo-data
-  vite_rails (~> 3.11)
   web-console
 
 RUBY VERSION
-   ruby 3.4.4p34
+  ruby 4.0.3
 
 BUNDLED WITH
-   2.6.8
+  4.0.10
