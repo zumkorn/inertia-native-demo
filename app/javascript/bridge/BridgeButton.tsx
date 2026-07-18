@@ -27,7 +27,10 @@ export function BridgeButton({ title, side = 'right', onTap, children }: BridgeB
   useEffect(() => {
     if (!supported) return
     // Native replies to "connect" each time the bar button is tapped.
-    send('connect', { title, side }, () => onTapRef.current?.())
+    const id = send('connect', { title, side }, () => onTapRef.current?.())
+    // Drop the old callback before re-registering, so a title/side change does
+    // not leave a second one behind and report every tap twice.
+    return () => window.HotwireNative?.web?.removeCallback(id)
   }, [supported, title, side, send])
 
   if (supported) return null
