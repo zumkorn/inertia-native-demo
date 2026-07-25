@@ -21,6 +21,10 @@ class ComponentsController < ApplicationController
     }
   end
 
+  def alert
+    render inertia: "components/alert"
+  end
+
   def button
     render inertia: "components/button"
   end

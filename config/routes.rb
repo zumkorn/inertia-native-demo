@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :components, only: %i[index new create] do
     collection do
+      get :alert
       get :button
       get :menu
       get :overflow
